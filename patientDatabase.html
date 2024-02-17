@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Database</title>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+  text-align: center;
+  color: #333;
+  text-shadow: 0 5px 15px rgba(235, 13, 13, 0.758);
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h2 style="text-align: center;">Patient Database</h2>
+  <div id="databaseContent"></div>
+</div>
+<script>
+  
+                           /////////////patientDatabase js code here
+document.addEventListener('DOMContentLoaded', function() {
+    const databaseContent = document.getElementById('databaseContent');
+    let patients = JSON.parse(localStorage.getItem('patients')) || {};
+
+    function displayDatabase() {
+        databaseContent.innerHTML = '';
+        for (const uhid in patients) {
+            const patient = patients[uhid];
+            const listItem = document.createElement('div');
+            listItem.innerHTML = `
+            <b>UHID:</b> ${uhid}, 
+            <b>Name:</b> ${patient.title} ${patient.firstName} ${patient.lastName}, 
+            <b>Address:</b> ${patient.address1}, ${patient.address2},
+            <b>Mobile:</b> ${patient.mobile}`;
+            databaseContent.appendChild(listItem);
+        }
+    }
+    displayDatabase();
+});
+
+</script>
+</body>
+</html>

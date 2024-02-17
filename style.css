@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+  text-align: center;
+  color: #333;
+  text-shadow: 0 5px 15px rgba(235, 13, 13, 0.758);
+}
+label {
+  font-weight: bold;
+}
+input[type="text"], input[type="tel"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 0.1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  padding: 3px 19px;
+  margin-right: 10px;
+  align-items: center;
+  align-content: center;
+  border-radius: 20px;
+  border-top-left-radius: 0cqh;
+  background-color: #5ba7f9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+button[type="submit"] {
+  width: auto;
+}
+.btn-group {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-group button {
+  width: auto;
+  margin-right: 10px;
+}
